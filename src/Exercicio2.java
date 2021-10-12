@@ -8,11 +8,13 @@ public class Exercicio2 {
 		
 		Scanner leitor = new Scanner(System.in);
 		int tempoEmMinutos;
+		String tempoEmHoras;
 		
 		System.out.print("Digite a duração do filme em minutos: ");
 		tempoEmMinutos = leitor.nextInt();
+		tempoEmHoras = String.format("%.2f", (tempoEmMinutos/60.0));
 		
-		System.out.println("A duração do filme em horas é: " + ((double)tempoEmMinutos/60) + " horas.\n"
+		System.out.println("A duração do filme em horas é: " + tempoEmHoras + " horas.\n"
 						  + "A duação do filme em segundos é: " + (tempoEmMinutos*60) + " segundos.");
 		leitor.close();
 	}
